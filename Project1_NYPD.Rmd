@@ -3,8 +3,8 @@ title: 'Project 1: NYPD Shooting Incident'
 author: "Welly Wong"
 date: "2023-04-02"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 **Load Packages**
@@ -306,7 +306,9 @@ ggplot(loc_risk, aes(x=boro, y=n, fill=location_desc)) +
 
 The number of incidents at Bar/night club appears to have decreased significantly in Manhattan post pandemic.
 
-The number of incidents at Pvt House increased quite sharply (from 5 to 33) in Queens post pandemic, perhaps more resources could be allocated there.
+The number of incidents at Pvt House increased quite sharply (from 5 to 33) in Queens post pandemic.
+Also the number of incidents at the Commercial Building in the Bronx has increased from 4 to 15 post Pandemic. 
+We might suggest allocating more resources over there based on this knowledge.
 
 The majority of incidents occured in multi-dwelling public housing. People living in public housing tend to have lower incomes, lower education levels, and higher unemployment rates. More study needed in order to understand why so many people in this most vulnerable group are becoming the victim of shooting incidents.
 
