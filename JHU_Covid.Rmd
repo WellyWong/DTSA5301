@@ -7,6 +7,15 @@ output:
   pdf_document: default
 ---
 
+**View this report in html**
+
+This document may require the installation of several packages.
+
+Alternatively, you can view the HTML file without installing the package here:
+
+<https://wellywong.github.io/JHU/>
+
+
 **Load Packages**
 
 ```{r libs}
@@ -36,9 +45,12 @@ global_deaths = read_csv(urls[2])
 japan_vaccine = read_csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Japan.csv")
 ```
 
-### **Initial Data Exploration**
+### **Initial Data Exploration and Objectives**
 
 I picked Japan for this project since it had the highest number of confirmed new cases (in January 2023) compared to the other Asian countries such as South Korea, Singapore, China and India (see the plot below). I thought it would be more interesting to analyze.
+
+The purpose of this report is to analyze Japan's latest wave of Covid-19 Pandemic. How contagious it was, i.e. to find the reproduction Number (R0) that define transmissibility of the virus. How is the trend going forward?
+
 
 ```{r exploratory}
 global5 = global_cases %>% rename(Country_Region = "Country/Region") %>%
