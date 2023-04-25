@@ -424,12 +424,16 @@ global_cases = read_csv(urls[1])</code></pre>
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div id="initial-data-exploration" class="section level3">
-<h3><strong>Initial Data Exploration</strong></h3>
+<div id="initial-data-exploration-and-objectives" class="section level3">
+<h3><strong>Initial Data Exploration and Objectives</strong></h3>
 <p>I picked Japan for this project since it had the highest number of
 confirmed new cases (in January 2023) compared to the other Asian
 countries such as South Korea, Singapore, China and India (see the plot
 below). I thought it would be more interesting to analyze.</p>
+<p>The purpose of this report is to analyze Japan’s latest wave of
+Covid-19 Pandemic. How contagious it was, i.e. to find the reproduction
+Number (R0) that define transmissibility of the virus. How is the trend
+going forward?</p>
 <pre class="r"><code>global5 = global_cases %&gt;% rename(Country_Region = &quot;Country/Region&quot;) %&gt;%
   filter(Country_Region %in% c(&quot;Japan&quot;, &quot;Korea, South&quot;, &quot;Singapore&quot;, &quot;China&quot;, &quot;India&quot;)) %&gt;%
   select(-c(&quot;Province/State&quot;, Lat, Long)) %&gt;%
